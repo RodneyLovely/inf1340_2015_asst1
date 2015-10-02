@@ -50,6 +50,7 @@ Is the car silent when you turn the key? """)
         else:
             print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
 
+
 #fail to start branches
 
         if fail_answer == "y":
@@ -74,11 +75,6 @@ Is the car silent when you turn the key? """)
             print("Check to ensure the choke is opening and closing.")
         else:
             print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
-
-
-#error message at start
-    else:
-        print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
 
 
 #something is wrong. If the program is run, it will work, but there are red notices that pop up too

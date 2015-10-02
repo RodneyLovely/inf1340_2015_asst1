@@ -28,7 +28,7 @@ def name_that_shape():
     Expected Outputs: The name of a shape, e.g.: triangle, square,... decagon
     Errors: an int less than 3, or an int greater than 10
     """
-    sides = raw_input("Enter the number of sides your shape has?: ")
+    sides = raw_input("Enter the number of sides your shape has: ")
 
     if sides == "3":
         print("Triangle")
