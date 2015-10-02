@@ -25,60 +25,54 @@ def diagnose_car():
     Errors:
 
     """
-    key_answer = raw_input("""In order for us to guide you, please press 'y' for "yes" and 'n' for "no."
+
+    error = ("ERROR: Remember to enter 'y' or 'n' in order for us to guide you. "
+            "Please restart the program.")
+
+    key = raw_input("""In order for us to guide you, please press 'y' for "yes" and 'n' for "no."
 Is the car silent when you turn the key? """)
 
-#battery terminal branches
-
-    if key_answer == "y":
-        battery_answer = raw_input("Are the battery terminals corroded? ")
-        if battery_answer == "y":
-            print("Clean terminals and start again.")
-        elif battery_answer == "n":
+    if key == "y":
+        battery = raw_input("Are the battery terminals corroded? ")
+        if battery == "y":
+            print("Clean terminals and try starting again.")
+        elif battery == "n":
             print("Replace cables and try again.")
         else:
-            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
+            print(error)
 
-#car click branches
-
-    if key_answer == "n":
-        click_answer = raw_input("Does the car make a clicking noise? ")
-        if click_answer == "y":
+    elif key == "n":
+        click = raw_input("Does the car make a clicking noise? ")
+        if click == "y":
             print("Replace the battery.")
-        elif click_answer == "n":
-            fail_answer = raw_input("Does the car crank up but fail to start? ")
+        elif click == "n":
+            crank = raw_input("Does the car crank up but fail to start? ")
+            if crank == "y":
+                print("Check spark plug connections.")
+            elif crank == "n":
+                engine = raw_input("Does the engine start and then die? ")
+                if engine == "n":
+                    print("Then go for a drive.")
+                elif engine == "y":
+                    fuel = raw_input("Does your car have fuel injection? ")
+                    if fuel == "n":
+                        print("Check to ensure the choke is opening and closing.")
+                    elif fuel == "y":
+                        print("Get it in for service.")
+                    else:
+                        print(error)
+                else:
+                    print(error)
+            else:
+                print(error)
         else:
-            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
+            print(error)
+    else:
+        print(error)
 
+#I'm not sure if I did it in elegant fashion, but this works at every step
+#including an error message if anything but 'y' or 'n' is pressed at any stage
+#I think the program could probably be clarified by good identifiers and better readability perhaps
 
-#fail to start branches
-
-        if fail_answer == "y":
-            print("Check spark plug connections.")
-        elif fail_answer == "n":
-            start_answer = raw_input("Does the engine start then die? ")
-        else:
-            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
-
-#start and die branches
-        if start_answer == "y":
-            fuel_answer = raw_input("Does your car have fuel injection? ")
-        elif start_answer == "n":
-            print("Then go ahead and drive.")
-        else:
-            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
-
-#fuel injection branches
-        if fuel_answer == "y":
-            print("Get it in for service.")
-        elif fuel_answer == "n":
-            print("Check to ensure the choke is opening and closing.")
-        else:
-            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
-
-
-#something is wrong. If the program is run, it will work, but there are red notices that pop up too
-#despite the program running all the way.
-#this will have to be investigated...
 
 diagnose_car()
