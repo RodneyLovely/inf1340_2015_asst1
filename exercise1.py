@@ -26,5 +26,7 @@ Lakshmi_total = (shares * share_sale - shares * share_cost) - broker_commission
 
 if (Lakshmi_total < 0):
     print("Lakshmi lost money, at a total of: " + str(Lakshmi_total) + " dollars.")
+elif Lakshmi_total == 0:
+    print ("Lakshmi broke even.")
 else:
     print("Lakshmi made a profit, at a total of: " + str(Lakshmi_total) + " dollars.")
