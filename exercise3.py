@@ -25,8 +25,18 @@ def diagnose_car():
     Errors:
 
     """
+first_answer = raw_input("""In order for us to help you, please enter 'y' for "yes", and 'n' for "no".
+Is the car silent when you turn the key? """)
 
-    print("The battery cables may be damaged. Replace cables and try again.")
+#battery terminals branches
+
+if first_answer == "y":
+    key_answer = raw_input("Are the battery terminals corroded? ")
+    if key_answer == "y":
+        print("Clean terminals and try starting again.")
+    else:
+        print("Replace cables and try again.")
+
 
 
 diagnose_car()
