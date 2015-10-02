@@ -25,18 +25,23 @@ def diagnose_car():
     Errors:
 
     """
-first_answer = raw_input("""In order for us to help you, please enter 'y' for "yes", and 'n' for "no".
+    key_answer = raw_input("""In order for us to guide you, please press 'y' for "yes" and 'n' for "no."
 Is the car silent when you turn the key? """)
 
-#battery terminals branches
+#battery terminal branches
 
-if first_answer == "y":
-    key_answer = raw_input("Are the battery terminals corroded? ")
     if key_answer == "y":
-        print("Clean terminals and try starting again.")
+        battery_answer = raw_input("Are the battery terminals corroded? ")
+        if battery_answer == "y":
+            print("Clean terminals and start again.")
+        elif battery_answer == "n":
+            print("Replace cables and try again.")
+        else:
+            print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
+
+
+#error message at start
     else:
-        print("Replace cables and try again.")
-
-
+        print("ERROR: Press 'y' or 'n' in order for us to guide you. Please start again.")
 
 diagnose_car()
