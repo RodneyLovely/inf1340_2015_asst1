@@ -8,8 +8,8 @@ after the stock transactions
 """
 
 #Calculate the amount Lakshmi spent on the share purchase, including the commission paid to her broker
-#Calculate the amount Lakshmi received on the share purchase, including the commission paid to her broker
-#Calculate the difference between the amount made on the sale with the amount spent on the purchase
+#Calculate the amount Lakshmi received from the share sale, including the commission paid to her broker
+#Calculate the difference between the share sale and the share purchase
 #output should be a positive or negative number
 
 shares = 2000
