@@ -8,25 +8,13 @@ after the stock transactions
 """
 
 
-__author__ = 'Susan Sim'
-__email__ = "ses@drsusansim.org"
-__copyright__ = "2015 Susan Sim"
-__license__ = "MIT License"
-
-
 shares = 2000
-share_cost = 900.00
-broker_commission = (shares * share_cost) * 0.03
+shares_purchase_price = 900.00
+broker_commission = 0.03
+shares_sale_price = 942.75
 
-#Two weeks later...
+shares_purchase = (shares * shares_purchase_price) + (shares * shares_purchase_price * broker_commission)
+shares_sale = (shares * shares_sale_price) - (shares * shares_sale_price * broker_commission)
+money = shares_sale - shares_purchase
 
-share_sale = 942.75
-broker_commission = (shares * share_sale) * 0.03 + broker_commission
-Lakshmi_total = (shares * share_sale - shares * share_cost) - broker_commission
-
-if (Lakshmi_total < 0):
-    print("Lakshmi lost money, at a total of: " + str(Lakshmi_total) + " dollars.")
-elif Lakshmi_total == 0:
-    print ("Lakshmi broke even.")
-else:
-    print("Lakshmi made a profit, at a total of: " + str(Lakshmi_total) + " dollars.")
+print(money)
