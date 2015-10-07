@@ -24,29 +24,29 @@ def name_that_shape():
 def name_that_shape():
     """
     For a given number of sides in a regular polygon, returns the shape name
-    Inputs: an integer not less than 3, nor greater than 10
-    Expected Outputs: The name of a shape, e.g.: triangle, quadrilateral,... decagon
-    Errors: an int less than 3, or an int greater than 10
+    Inputs: int 3, 4, 5, 6, 7, 8, 9, 10
+    Expected Outputs: str Triangle, Quadrilateral, Pentagon, Hexagon, Heptagon, Octogon, Nonagon, Decagon
+    Errors: any int < 3, or > 10
     """
-    sides = raw_input("How many sides does your shape have? Enter a number between 3 and 10: ")
+    number_of_sides = raw_input("How many sides does your shape have? Enter a number between 3 and 10: ")
 
-    if sides == "3":
+    if number_of_sides == "3":
         print("Triangle")
-    elif sides == "4":
+    elif number_of_sides == "4":
         print("Quadrilateral")
-    elif sides == "5":
+    elif number_of_sides == "5":
         print("Pentagon")
-    elif sides == "6":
+    elif number_of_sides == "6":
         print("Hexagon")
-    elif sides == "7":
+    elif number_of_sides == "7":
         print("Heptagon")
-    elif sides == "8":
+    elif number_of_sides == "8":
         print("Octogon")
-    elif sides == "9":
+    elif number_of_sides == "9":
         print("Nonagon")
-    elif sides == "10":
+    elif number_of_sides == "10":
         print("Decagon")
-    elif sides < "3" or sides > "10":
+    elif number_of_sides < "3" or number_of_sides > "10":
         print("Error")
 
 name_that_shape()
