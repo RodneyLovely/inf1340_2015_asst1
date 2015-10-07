@@ -10,20 +10,6 @@ __license__ = "MIT License"
 def name_that_shape():
     """
     For a given number of sides in a regular polygon, returns the shape name
-
-    Inputs:
-
-    Expected Outputs:
-
-    Errors:
-
-    """
-
-    print("Error")
-
-def name_that_shape():
-    """
-    For a given number of sides in a regular polygon, returns the shape name
     Inputs: int 3, 4, 5, 6, 7, 8, 9, 10
     Expected Outputs: str Triangle, Quadrilateral, Pentagon, Hexagon, Heptagon, Octogon, Nonagon, Decagon
     Errors: any int < 3, or > 10
