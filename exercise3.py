@@ -18,11 +18,11 @@ def diagnose_car():
     Interactively queries the user with yes/no questions to identify a
     possible issue with a car.
 
-    Inputs:
+    Inputs: only a raw_input of "y" or "n"
 
-    Expected Outputs:
+    Expected Outputs: a progression that builds on the previous question, depending on the answer of "y" or "n"
 
-    Errors:
+    Errors: anything entered other than a raw_input of "y" or "n" prints an error statement
 
     """
 
