@@ -52,11 +52,8 @@ Is the car silent when you turn the key? """)
             elif crank == "n":
                 engine = raw_input("Does the engine start and then die? ")
                 if engine == "n":
-                    print("Then go for a drive.")
-
-                #it's possible I'm inferring this drive part from thin air, and
-                #we're expected to make that part an error, ie: error2 = raw_input("ERROR: Car seems to be working fine.")
-
+                    #I changed the 'print' statement due to the class email from Oct. 7
+                    print("Engine is not getting enough fuel. Clean fuel pump.")
                 elif engine == "y":
                     fuel = raw_input("Does your car have fuel injection? ")
                     if fuel == "n":
