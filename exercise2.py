@@ -15,7 +15,55 @@ def name_that_shape():
     Expected Outputs: str Triangle, Quadrilateral, Pentagon, Hexagon, Heptagon, Octogon, Nonagon, Decagon
 
     Errors: any int < 3, or > 10
+
+    Testing:
+
+    Test 1:
+    input: 3
+    output: "triangle"
+
+    Test 2:
+    input: 4
+    output: "quadrilateral"
+
+    Test 3:
+    input: 5
+    output: "pentagon"
+
+    Test 4:
+    input: 6
+    output: "hexagon"
+
+    Test 5:
+    input: 7
+    output: "heptagon"
+
+    Test 6:
+    input: 8
+    output: "octagon"
+
+    Test 7:
+    input: 9
+    output: "nonagon"
+
+    Test 8:
+    input: 10
+    output: "decagon"
+
+    Test 9:
+    input: 11
+    output: "Error"
+
+    Test 10:
+    input: 1
+    output: "Error"
+
+    Test 11:
+    input: 20000
+    output: "Error"
+
     """
+
     number_of_sides = raw_input("How many sides does your shape have? Enter a number between 3 and 10: ")
 
     if number_of_sides == "3":

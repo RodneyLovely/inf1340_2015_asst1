@@ -5,16 +5,19 @@
 This module prints the amount of money that Lakshmi has remaining
 after the stock transactions
 
+Expected output = output should be a positive or negative float
 
+Testing:
 
-Inputs (for a test run with different numbers):
+Test 1:
+
+inputs:
 #shares = 100
 #purchase_price = 10.00
 #broker_commission = 0.05
 #sale_price = 15.00
-#output = 375.0
 
-Expected output = output should be a positive or negative float
+#output = 375.0
 
 """
 
