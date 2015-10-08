@@ -53,4 +53,4 @@ def diagnose_car():
                 elif diag5 == "N":
                     print("Engine is not getting enough fuel. Clean fuel pump.")
 
-diagnose_car()
+#diagnose_car()
