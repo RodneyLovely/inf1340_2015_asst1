@@ -17,21 +17,21 @@ def name_that_shape():
     number_of_sides = raw_input("How many sides does your shape have? Enter a number between 3 and 10: ")
 
     if number_of_sides == "3":
-        print("Triangle")
+        print("triangle")
     elif number_of_sides == "4":
-        print("Quadrilateral")
+        print("quadrilateral")
     elif number_of_sides == "5":
-        print("Pentagon")
+        print("pentagon")
     elif number_of_sides == "6":
-        print("Hexagon")
+        print("hexagon")
     elif number_of_sides == "7":
-        print("Heptagon")
+        print("heptagon")
     elif number_of_sides == "8":
-        print("Octogon")
+        print("octagon")
     elif number_of_sides == "9":
-        print("Nonagon")
+        print("nonagon")
     elif number_of_sides == "10":
-        print("Decagon")
+        print("decagon")
     elif number_of_sides < "3" or number_of_sides > "10":
         print("Error")
 
