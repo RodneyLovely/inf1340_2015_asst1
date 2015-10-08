@@ -5,7 +5,7 @@
 This module prints the amount of money that Lakshmi has remaining
 after the stock transactions
 
-Expected output = output should be a positive or negative float
+Expected output:  positive or negative float
 
 Testing:
 
