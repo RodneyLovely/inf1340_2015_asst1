@@ -26,10 +26,9 @@ def diagnose_car():
 
     """
 
-    error = ("ERROR: Remember to enter 'y' or 'n' in order for us to guide you. "
-            "Please restart the program.")
+    error = ("ERROR")
 
-    key = raw_input("""In order for us to guide you, please press 'y' for "yes" and 'n' for "no."
+    key = raw_input("""Please press 'y' for "yes" and 'n' for "no."
 Is the car silent when you turn the key? """)
 
     if key == "y":
