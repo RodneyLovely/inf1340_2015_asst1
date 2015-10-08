@@ -78,7 +78,6 @@ Is the car silent when you turn the key? """)
 
 diagnose_car()
 
-
 def diagnose_car():
     """
     Interactively queries the user with yes/no questions to identify a
@@ -92,40 +91,42 @@ def diagnose_car():
 
     """
 
-q = raw_input("Is the car silent when you turn the key?: ")
-if q == "y":
-    q = raw_input("Are the battery terminals corroded?: ")
-    if q == "y":
-        print("Clean terminals and try starting again.")
-    elif q == "n":
-        print("Replace cables and try again.")
-    else:
-        print("Error")
-elif q == "n":
-    q = raw_input("Does the care make a clicking noise?: ")
-    if q == "y":
-        print("Replace the battery.")
-    elif q == "n":
-        q = raw_input("Does the car crank up, but fail to start?: ")
-        if q == "y":
-            print("Check spark plug connections.")
-        elif q == "n":
-            q = raw_input("Does the engine start then die?: ")
-            if q == "y":
-                q == raw_input("Does your car have fuel injection?: ")
-                if q == "y":
-                    print("Get it in for service.")
-                elif q == "n":
-                    print("Check to ensure the choke is opening and closing.")
+    diag1 = raw_input("Is the car silent when you turn the key?: ")
+    if diag1 == "y":
+        diag2 = raw_input("Are the battery terminals corroded?: ")
+        if diag2 == "y":
+            print("Clean terminals and try starting again.")
+        elif diag2 == "n":
+            print("Replace cables and try again.")
+        else:
+            print("Error")
+    elif diag1 == "n":
+        diag3 = raw_input("Does the car make a clicking noise?: ")
+        if diag3 == "y":
+            print("Replace the battery.")
+        elif diag3 == "n":
+            diag4 = raw_input("Does the car crank up but fail to start?: ")
+            if diag4 == "y":
+                print("Check spark plug connections.")
+            elif diag4 == "n":
+                diag5 = raw_input("Does the engine start then die?: ")
+                if diag5 == "y":
+                    diag6 = raw_input("Does your car have fuel injection?: ")
+                    if diag6 == "n":
+                        print("Check to ensure the choke is opening and closing.")
+                    elif diag6 == "y":
+                        print("Get it in for service.")
+                    else:
+                        print("Error")
+                elif diag5 == "n":
+                    print("Engine is not getting enough fuel. Clean fuel pump.")
                 else:
                     print("Error")
-            elif q == "n":
-                print("Engine is not getting enough fuel. Clean fuel pump.")
             else:
                 print("Error")
         else:
             print("Error")
     else:
         print("Error")
-else:
-    print("Error")
+
+diagnose_car()
