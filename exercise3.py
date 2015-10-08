@@ -77,3 +77,40 @@ Is the car silent when you turn the key? """)
 
 
 diagnose_car()
+
+
+def diagnose_car():
+    """
+    Interactively queries the user with yes/no questions to identify a
+    possible issue with a car.
+
+    Inputs: only a raw_input of "y" or "n"
+
+    Expected Outputs: a progression that builds on the previous question, depending on the answer of "y" or "n"
+
+    Errors: anything entered other than a raw_input of "y" or "n" prints an error statement
+
+    """
+
+q = raw_input("Is the car silent when you turn the key?: ")
+if q == "y":
+    q = raw_input("Are the battery terminals corroded?: ")
+    if q == "y":
+        print("Clean terminals and try starting again.")
+    elif q == "n":
+        print("Replace cables and try again.")
+elif q == "n":
+    q = raw_input("Does the care make a clicking noise?: ")
+    if q == "y":
+        print("Replace the battery.")
+    elif q == "n":
+        q = raw_input("Does the car crank up, but fail to start?: ")
+        if q == "y":
+            print("Check spark plug connections.")
+        elif q == "n":
+            q = raw_input("Does the engine start then die?: ")
+            if q == "y":
+                q == raw_input("Does your car have fuel injection?: ")
+            elif q == "n":
+                print("Engine is not getting enough fuel. Clean fuel pump.")
+            
