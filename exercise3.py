@@ -99,6 +99,8 @@ if q == "y":
         print("Clean terminals and try starting again.")
     elif q == "n":
         print("Replace cables and try again.")
+    else:
+        print("Error")
 elif q == "n":
     q = raw_input("Does the care make a clicking noise?: ")
     if q == "y":
@@ -111,6 +113,19 @@ elif q == "n":
             q = raw_input("Does the engine start then die?: ")
             if q == "y":
                 q == raw_input("Does your car have fuel injection?: ")
+                if q == "y":
+                    print("Get it in for service.")
+                elif q == "n":
+                    print("Check to ensure the choke is opening and closing.")
+                else:
+                    print("Error")
             elif q == "n":
                 print("Engine is not getting enough fuel. Clean fuel pump.")
-            
+            else:
+                print("Error")
+        else:
+            print("Error")
+    else:
+        print("Error")
+else:
+    print("Error")
