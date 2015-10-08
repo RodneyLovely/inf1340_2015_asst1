@@ -129,4 +129,4 @@ def diagnose_car():
     else:
         print("Error")
 
-diagnose_car()
+#diagnose_car()
